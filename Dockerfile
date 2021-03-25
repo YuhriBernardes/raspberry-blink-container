@@ -13,4 +13,6 @@ WORKDIR /app
 
 COPY --from=build /build/blinker ./
 
+RUN chmod +x ./blinker
+
 ENTRYPOINT ["./blinker"]
